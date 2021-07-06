@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>검색상자 인터렉션</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+   
+    <style>
+        * {padding: 0;margin: 0;}   
+        body {padding: 0 2%;}
+        header {
+            max-width: 640px;
+            width: 100%;
+            margin: 0 auto;
+            height: auto;
+            text-align: center;
+            border: 1px solid #ccc; 
+            
+        }
+        .wrap {
+            height: 57px;
+            line-height: 57px;
+            overflow: hidden;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .wrap .menu {float:left;}
+        .wrap h1 {display: inline-block;}
+        .wrap .search {float:right;}
+
+         
+        .search_box {
+            background-color: #eee;
+            padding: 20px;
+            position: relative;
+            display: none;
+        }
+        .search_box input[type="text"] {
+            height: 50px;
+            background-color: #fff;
+            border:0;
+            border-radius: 5px;
+            width:100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .search_box input[type="text"]:focus {
+            outline: none;
+        }
+        .search_box button {
+            position: absolute;
+            top: 50%;
+            right:29px;
+            transform: translate(0, -50%);
+            width: 55px;
+            height: 30px;
+            background-color: #FF6565;
+            color: #fff;
+            border-radius: 5px;
+            border:0;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .search_box button:hover { 
+            background-color: #F23434;
+        }
+        .fas {color: #707070; font-size: 20px;} 
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+
+            <div class="menu">
+                <a href="#" onclick="return false;">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+            <h1>LOGO</h1>
+            <div class="search">
+                <a href="#" onclick="return false;">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+        </div><!-- wrap end -->
+        <div class="search_box">
+            <label>
+                <input type="text">
+                <button onclick = "location.href = 'http://naver.com'" value="검색">검색</button><!-- 새창 onclick="window.open('address')" -->
+            </label>
+        </div>
+    </header>
+    <script>
+        $('.search').click(function(){
+        	// $('.search_box').toggle();
+        	$('.search_box').stop().slideToggle();
+        });
+    </script>
+   
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
