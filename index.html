@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>검색상자 인터렉션</title>
-    <script src="jquery-3.5.1.min.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
    
@@ -75,13 +75,13 @@
         <div class="wrap">
 
             <div class="menu">
-                <a href="#" onclick="return false;">
+                <a href="#">
                     <i class="fas fa-bars"></i>
                 </a>
             </div>
             <h1>LOGO</h1>
             <div class="search">
-                <a href="#" onclick="return false;">
+                <a href="#">
                     <i class="fas fa-search"></i>
                 </a>
             </div>
@@ -89,14 +89,15 @@
         <div class="search_box">
             <label>
                 <input type="text">
-                <button onclick = "location.href = 'http://naver.com'" value="검색">검색</button><!-- 새창 onclick="window.open('address')" -->
+                <button value="검색">검색</button>
             </label>
         </div>
     </header>
+
+    <script src="jquery-3.5.1.min.js"></script>
     <script>
         $('.search').click(function(){
-        	// $('.search_box').toggle();
-        	$('.search_box').stop().slideToggle();
+        	$('.search_box').slideToggle();
         });
     </script>
    
